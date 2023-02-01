@@ -38,3 +38,11 @@ docker push khaledhadjali/k8s-web-to-nginx
 # how to exec command inside pod container
 k exec k8s-web-to-nginx-77689c6774-pxtdv --nslookup nginx
 k exec k8s-web-to-nginx-77689c6774-pxtdv -- nslookup nginx
+
+
+
+python fast api : 
+
+    docker build  . -t khaledhadjali/k8s-hello-fastapi
+    docker run -p 8000:8000 -i -t khaledhadjali/k8s-hello-fastapi:latest 
+
