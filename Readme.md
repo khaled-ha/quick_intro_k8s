@@ -25,20 +25,22 @@ How to access minikube pod:
     ssh -v docker@192.168.59.100
 
 
-How to build your image:
+# How to build your image:
     docker build  . -t khaledhadjali/k8s-web-hello
     docker push khaledhadjali/k8s-web-hello 
     docker build  . -t khaledhadjali/k8s-web-hello:2.0.0
     docker push khaledhadjali/k8s-web-hello:2.0.0
 
-# to start minikube with a specefic driver
-minikube start --driver=virtualbox
-minikube stop
+# to start minikube with a specefic driver : 
+    minikube start --driver=virtualbox
+    minikube stop
 
-alias k=kubectl
-k describe node
-k delete -f k8s-web-to-nginx.yml -f nginx.yml
-k apply -f k8s-web-to-nginx.yml -f nginx.yml
+# How to set alias for kubectl command and work with it :
+    alias k=kubectl
+    k describe node
+    k delete -f k8s-web-to-nginx.yml -f nginx.yml
+    k apply -f k8s-web-to-nginx.yml -f nginx.yml
+
 minikube service k8s-web-to-nginx
 
 docker build  . -t khaledhadjali/k8s-web-to-nginx
