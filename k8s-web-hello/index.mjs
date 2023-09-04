@@ -6,7 +6,15 @@ const PORT = 3000
 
 app.get(
     "/", (req, res) => {
-        const helloMessage = `Version 2 : Hello frm the ${os.hostname()}`
+        const helloMessage = 'Message : Hello k8s trainer '
+        console.log(helloMessage)
+        res.send(helloMessage)
+    }
+)
+
+app.get(
+    "/fastapi", (req, res) => {
+        const helloMessage = 'Welcome to express from fastapi request'
         console.log(helloMessage)
         res.send(helloMessage)
     }

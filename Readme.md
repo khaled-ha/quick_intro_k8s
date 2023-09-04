@@ -50,6 +50,9 @@ docker push khaledhadjali/k8s-web-to-nginx
 k exec k8s-web-to-nginx-77689c6774-pxtdv --nslookup nginx
 k exec k8s-web-to-nginx-77689c6774-pxtdv -- nslookup nginx
 
+express image:
+    docker build  . -t khaledhadjali/k8s-web-hello
+    docker run -p 3000:3000 -i -t khaledhadjali k8s-web-hello:latest
 
 
 python fast api : 
@@ -57,3 +60,24 @@ python fast api :
     docker build  . -t khaledhadjali/k8s-hello-fastapi
     docker run -p 8000:8000 -i -t khaledhadjali/k8s-hello-fastapi:latest 
 
+
+# k8s logging
+
+--- log a pod
+kubectl logs pod-name 
+
+--- log od contyainer in pod in case multi container in pod
+kubectl logs pod-name -c container-name
+
+# describe pod
+kubectl describe pod pod_name
+
+get details about pod with json format 
+kubectl get pôd pod_name -o json
+
+# describe deplouyment with json format 
+ kubectl get deployment deployment_name -o [json | yaml]
+
+
+ # exec command inside container
+ kubectl exec pod_name -it sh

@@ -1,0 +1,11 @@
+fast api deployment :
+
+    cd k8s-hello-fastapi
+    docker build  . -t khaledhadjali/k8s-hello-fastapi
+    docker push khaledhadjali/k8s-hello-fastapi
+    cd ..
+    kubectl delete -f k8s-web-fastapi.yml
+    kubectl apply -f k8s-web-fastapi.yml
+    minikube service k8s-hello-fastapi
+
+
