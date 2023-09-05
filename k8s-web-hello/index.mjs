@@ -1,5 +1,4 @@
 import express from 'express'
-import os from 'os'
 
 const app = express()
 const PORT = 3000
