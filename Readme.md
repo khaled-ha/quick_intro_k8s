@@ -81,3 +81,5 @@ kubectl get pôd pod_name -o json
 
  # exec command inside container
  kubectl exec pod_name -it sh
+
+kubectl delete pod --force
