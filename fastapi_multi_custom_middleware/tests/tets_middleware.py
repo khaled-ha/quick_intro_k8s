@@ -1,6 +1,5 @@
-# import level
-import time
 from fastapi.testclient import TestClient
+import app
 
 # at the end of the file
 client = TestClient(app)
